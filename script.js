@@ -26,6 +26,7 @@
     for (let i = 0; i < sliderElement.value; i++) {
       pass += charset.charAt(Math.floor(Math.random() * n));
     }
+    limparPassword();
     password.innerText += pass;
     containerPassword.classList.remove("hide");
     novaSenha = pass;
@@ -33,5 +34,8 @@
   function copyPassword() {
     alert("Senha copiada com sucesso!");
     return navigator.clipboard.writeText(novaSenha);
+  }
+  function limparPassword() {
+    password.innerText = "";
   }
 })();
